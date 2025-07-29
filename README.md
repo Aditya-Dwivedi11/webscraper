@@ -1,63 +1,55 @@
-Web Scraper Project
-A Python-based web scraping tool to extract product data (title and price) from e-commerce sites.
-This project uses requests and BeautifulSoup libraries to scrape data and exports it into a CSV file.
+# 🕸️ Web Scraper Project
 
-Features
-Scrapes product titles and prices from a specified URL
+A lightweight, Python-based web scraping tool that extracts product data (title and price) from e-commerce websites.  
+It uses `requests` and `BeautifulSoup` to scrape data and exports the results to a CSV file.
 
-Supports scraping from different URLs by passing the URL as an argument
+---
 
-Saves the scraped data into a CSV file (output.csv)
+## ✨ Features
 
-Easy to modify for other websites with similar HTML structure
+- 🔗 Scrapes product titles and prices from any specified URL  
+- 🌐 Accepts dynamic URLs via user input or code change  
+- 📄 Saves scraped data into a structured CSV file (`output.csv`)  
+- 🔧 Easy to adapt to other websites with a similar HTML layout  
 
-Requirements
-Python 3.x
+---
 
-requests
+## 📦 Requirements
 
-beautifulsoup4
+- Python 3.x  
+- requests
+- beautifulsoup4
 
-Install dependencies with:
+Install all dependencies by running:
+  pip install -r requirements.txt
 
-bash
-Copy
-Edit
-pip install -r requirements.txt
-Usage
-Clone or download the repository.
 
-Open scraper.py and modify the URL in the main function or pass the URL dynamically.
-
+🚀 Usage
+Clone or download this repository
+Modify the URL directly in scraper.py or pass the URL dynamically
 Run the scraper:
+  python scraper.py
+The scraped data will be saved in "output.csv" in the same folder
 
-bash
-Copy
-Edit
-python scraper.py
-The scraped data will be saved to output.csv.
 
-How It Works
-Sends an HTTP GET request to the given URL with appropriate headers.
+⚙️ How It Works
+  Sends an HTTP GET request to the provided URL with appropriate headers
+  Parses the HTML content using BeautifulSoup
+  Identifies product containers using CSS selectors
+  Extracts product titles and prices
+  Writes the collected data into a CSV file
 
-Parses the HTML content with BeautifulSoup.
 
-Finds product containers using CSS selectors.
+📊 Sample Output
+  output.csv:
+   Title,Price
+   Laptop 1,$999
+   Laptop 2,$799
+   Laptop 3,$599
 
-Extracts product title and price.
+🤝 Contributing
+Feel free to fork this repo, improve the scraper logic, and open a pull request.
+Issues and suggestions are always welcome!
 
-Writes data to CSV.
-
-Sample Output
-bash
-Copy
-Edit
-Title,Price
-Laptop 1,$999
-Laptop 2,$799
-...
-Contributing
-Feel free to fork and modify the scraper to suit your needs! Open an issue or pull request for improvements.
-
-License
-This project is open source and available under the MIT License.
+🪪 License
+This project is licensed under the MIT License – feel free to use, modify, and distribute it.
